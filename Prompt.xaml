@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup
+    x:Class="Scanner.Mobile.Views.Popups.Prompt"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    CanBeDismissedByTappingOutsideOfPopup="False"
+    Closed="Popup_Closed">
+    <ScrollView>
+        <VerticalStackLayout
+            BackgroundColor="#ffc107"
+            HorizontalOptions="FillAndExpand"
+            MaximumWidthRequest="400"
+            MinimumWidthRequest="300"
+            VerticalOptions="FillAndExpand">
+            <Frame
+                Padding="2"
+                BorderColor="#ffc107"
+                CornerRadius="0"
+                HasShadow="True"
+                ZIndex="0">
+                <Frame.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="0.9"
+                        Radius="10"
+                        Offset="20,20" />
+                </Frame.Shadow>
+                <StackLayout>
+
+                    <VerticalStackLayout BackgroundColor="GhostWhite">
+                        <Frame
+                            Margin="-5"
+                            Padding="20"
+                            BorderColor="#ffc107"
+                            CornerRadius="0"
+                            HasShadow="True"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            ZIndex="0">
+                            <Label
+                                x:Name="lblTitle"
+                                FontAttributes="Bold"
+                                FontSize="15"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand" />
+                        </Frame>
+                        <Label
+                            x:Name="lblBody"
+                            Padding="20"
+                            FontSize="13"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand" />
+                        <HorizontalStackLayout
+                            Padding="10"
+                            BackgroundColor="White"
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="FillAndExpand">
+                            <Button
+                                x:Name="noBtn"
+                                Clicked="noBtn_Clicked"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="No"
+                                VerticalOptions="CenterAndExpand" />
+                            <Button
+                                x:Name="yesBtn"
+                                Margin="10,0,10,0"
+                                Clicked="yesBtn_Clicked"
+                                HorizontalOptions="EndAndExpand"
+                                Text="Yes"
+                                VerticalOptions="CenterAndExpand" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </StackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</mct:Popup>
